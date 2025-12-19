@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeEstate - Premium Real Estate Properties</title>
+    <meta name="description" content="Discover your dream home with LuxeEstate. Browse premium real estate properties with modern amenities and exceptional locations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">🏛️</span>
+                <span class="logo-text">LuxeEstate</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#properties" class="nav-link">Properties</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="btn btn-primary" id="schedule-btn">Schedule Tour</button>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Discover Your Dream Home</h1>
+            <p class="hero-subtitle">Explore premium properties in the most sought-after locations</p>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-tabs">
+                    <button class="search-tab active" data-type="buy">Buy</button>
+                    <button class="search-tab" data-type="rent">Rent</button>
+                    <button class="search-tab" data-type="sell">Sell</button>
+                </div>
+                <div class="search-form">
+                    <div class="search-input-group">
+                        <span class="search-icon">📍</span>
+                        <input type="text" placeholder="Enter location..." class="search-input" id="location-input">
+                    </div>
+                    <div class="search-input-group">
+                        <span class="search-icon">🏠</span>
+                        <select class="search-select" id="property-type">
+                            <option value="">Property Type</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="villa">Villa</option>
+                            <option value="condo">Condo</option>
+                        </select>
+                    </div>
+                    <div class="search-input-group">
+                        <span class="search-icon">💰</span>
+                        <select class="search-select" id="price-range">
+                            <option value="">Price Range</option>
+                            <option value="0-500000">$0 - $500K</option>
+                            <option value="500000-1000000">$500K - $1M</option>
+                            <option value="1000000-2000000">$1M - $2M</option>
+                            <option value="2000000+">$2M+</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-search" id="search-btn">
+                        <span>Search</span>
+                        <span class="btn-icon">🔍</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">1,200+</div>
+                    <div class="stat-label">Properties</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">850+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Expert Agents</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="section featured-section" id="properties">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Properties</h2>
+                <p class="section-subtitle">Handpicked properties for you</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="house">Houses</button>
+                <button class="filter-btn" data-filter="apartment">Apartments</button>
+                <button class="filter-btn" data-filter="villa">Villas</button>
+                <button class="filter-btn" data-filter="condo">Condos</button>
+            </div>
+
+            <!-- Properties Grid -->
+            <div class="properties-grid" id="properties-grid">
+                <!-- Properties will be dynamically loaded here -->
+            </div>
+
+            <div class="view-more-container">
+                <button class="btn btn-outline" id="view-more-btn">
+                    <span>View More Properties</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Everything you need for your real estate journey</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏡</div>
+                    <h3 class="service-title">Buy a Home</h3>
+                    <p class="service-description">Find your perfect home from our curated selection of premium properties.</p>
+                    <button class="btn btn-text">Learn More →</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔑</div>
+                    <h3 class="service-title">Rent a Property</h3>
+                    <p class="service-description">Discover rental properties that match your lifestyle and budget.</p>
+                    <button class="btn btn-text">Learn More →</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3 class="service-title">Sell Your Home</h3>
+                    <p class="service-description">Get the best value for your property with our expert guidance.</p>
+                    <button class="btn btn-text">Learn More →</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3 class="service-title">Property Valuation</h3>
+                    <p class="service-description">Get accurate property valuations from certified professionals.</p>
+                    <button class="btn btn-text">Learn More →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-title">Why Choose LuxeEstate?</h2>
+                    <p class="about-description">We are committed to providing exceptional real estate services with a focus on luxury, quality, and customer satisfaction. Our team of expert agents brings decades of combined experience to help you find your perfect property.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">Verified Properties</span>
+                        </div>
+                        <div class="about-feature">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">Expert Consultation</span>
+                        </div>
+                        <div class="about-feature">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">24/7 Support</span>
+                        </div>
+                        <div class="about-feature">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-text">Best Market Prices</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary about-cta">Get Started Today</button>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Have questions? We'd love to hear from you</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@luxeestate.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Luxury Avenue, NY 10001</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-input" placeholder="Your Phone">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input form-textarea" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo footer-logo">
+                        <span class="logo-icon">🏛️</span>
+                        <span class="logo-text">LuxeEstate</span>
+                    </div>
+                    <p class="footer-description">Your trusted partner in finding the perfect property.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#properties" class="footer-link">Properties</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Services</h4>
+                    <a href="#" class="footer-link">Buy Property</a>
+                    <a href="#" class="footer-link">Rent Property</a>
+                    <a href="#" class="footer-link">Sell Property</a>
+                    <a href="#" class="footer-link">Valuation</a>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-text">Subscribe to get the latest property updates</p>
+                    <div class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email">
+                        <button class="btn btn-primary btn-newsletter">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LuxeEstate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Property Details -->
+    <div class="modal" id="property-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">×</button>
+            <div id="modal-body">
+                <!-- Property details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Schedule Tour Modal -->
+    <div class="modal" id="schedule-modal">
+        <div class="modal-overlay" id="schedule-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="schedule-close">×</button>
+            <div class="schedule-form-container">
+                <h2>Schedule a Tour</h2>
+                <p>Choose your preferred date and time</p>
+                <form class="contact-form" id="schedule-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-input" placeholder="Your Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="time" class="form-input" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Confirm Schedule</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
